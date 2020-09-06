@@ -28,6 +28,7 @@ public class HitBox : MonoBehaviour
     {
         
     }
+
     void OnTriggerEnter2D(Collider2D collision) {
 
         if (isTakeDamage == true) {
@@ -41,15 +42,12 @@ public class HitBox : MonoBehaviour
             GameObject prefub = (GameObject)Resources.Load("Prefabs/explosion");
 
             // void OnTriggerEnter2Dの引数が collision なので collision.tag
-            if (collision.tag == "Enemy") {
+            if (collision.tag == "Enemy" || collision.tag == "EnemyBullet") {
                 // 接触したらダメージを受ける
                 Hp--;
             }
             else if (collision.tag == "Boss") {
                 Hp -= 2;
-            }
-            else if (collision.tag == "EnemyBullet") {
-                Hp--;
             }
 
             // Hpが変動したらUIのHpも更新する

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,9 +15,28 @@ public class Robot : MonoBehaviour
     // 弾を撃つタイミング
     int shootingTiming = 0;
 
+    // Powerオブジェクト
+    public GameObject UiPowerObject;
+    public GameObject UiPointObject;
+
+    // 攻撃力
+    public int power = 1;
+    public int maxPower = 5;
+
+    // ポイント
+    public int point = 0;
+    public int maxPoint = 100;
+
+    GameObject hitBox;
+    HitBox hitbox;
+
     // Start is called before the first frame update
     void Start()
     {
+        hitBox = GameObject.Find("hitbox");
+        hitbox = hitBox.GetComponent<HitBox>();
+        UiPowerObject.GetComponent<PowerManager>().PrintPower(power, maxPower);
+        UiPointObject.GetComponent<PointManager>().PrintPoint(point, maxPoint);
         Vector2 RobotPos = new Vector2(-2.5f, 0.5f);
         this.transform.position = RobotPos;
     }
@@ -24,6 +44,12 @@ public class Robot : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
+    }
+
+    void FixedUpdate() {
+        UiPointObject.GetComponent<PointManager>().PrintPoint(point, maxPoint);
+
+        // 射撃
         if (Input.GetKey(KeyCode.Z)) {
             shootingTiming++;
         }
@@ -31,16 +57,13 @@ public class Robot : MonoBehaviour
             shootingTiming = 0;
         }
 
-        if (shootingTiming != 0 && shootingTiming % 8 == 0) {
+        if (shootingTiming != 0 && shootingTiming % 4 == 0) {
             GameObject normalBullet = (GameObject)Resources.Load("Prefabs/NormalBullet");
 
             if (normalBullet != null) {
                 Instantiate(normalBullet, transform.position, Quaternion.identity);
             }
         }
-    }
-
-    void FixedUpdate() {
 
         // 左Shiftキーが押されている間は減速する
         if (Input.GetKey(KeyCode.LeftShift)) {
@@ -64,6 +87,22 @@ public class Robot : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.RightArrow) && RobotPos.x <= 4.5f){
             transform.Translate(Speed, 0.0f, 0.0f);
+        }
+
+        // ポイントが溜まっていたらパワーアップ
+        if(point >= maxPoint) {
+            if (Input.GetKeyDown(KeyCode.A)) {
+                point -= 100;
+                hitbox.MaxHp += 3;
+                hitbox.Hp += 3;
+                hitbox.UiHpObject.GetComponent<HpManager>().PrintHp(hitbox.Hp, hitbox.MaxHp);
+            }
+
+            if (Input.GetKeyDown(KeyCode.S)) {
+                point -= 100;
+                power += 1;
+                UiPowerObject.GetComponent<PowerManager>().PrintPower(power, maxPower);
+            }
         }
     }
 }

@@ -25,7 +25,7 @@ public class BossBullet01 : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision) {
 
-        if (collision.tag == "Player" ||
+        if (collision.tag == "HitBox" ||
             collision.tag == "PlayerBullet") {
             Destroy(gameObject);
         }
