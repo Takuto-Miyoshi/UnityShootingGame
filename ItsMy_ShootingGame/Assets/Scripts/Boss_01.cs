@@ -6,14 +6,16 @@ public class Boss_01 : MonoBehaviour
 {
     float speed = 0.05f;
     float timer = 0.0f;
-    public int hp = 10;
+    public int hp = 100;
     public GameObject ExplosionPrefab = null;
 
     public GameObject player;
     public GameObject bullet;
 
     const float TIMER_RESET = 0.0f;
-    float aimShootingSpace = 0.5f;
+    float aimShootingSpace = 0.2f;
+
+    Vector2 BossPosion;
 
 
     // 敵の行動用 列挙定数
@@ -24,11 +26,13 @@ public class Boss_01 : MonoBehaviour
     }
 
     ActionPart Action = ActionPart.Apearance;
-    public float apeaFinishPoint = 4.5f; // 4.5f は止めたい位置
+    public float apeaFinishPoint = 3.5f; // 4.5f は止めたい位置
 
     // Start is called before the first frame update
     void Start()
     {
+        BossPosion = new Vector2(7.0f, 0.5f);
+        this.transform.position = BossPosion;
         player = GameObject.Find("Robot");
     }
 
@@ -57,7 +61,6 @@ public class Boss_01 : MonoBehaviour
 
         if (collision.tag == "PlayerBullet") {
             hp--;
-
 
             if (hp <= 0) {
                 Action = ActionPart.Destroy;
@@ -90,7 +93,7 @@ public class Boss_01 : MonoBehaviour
     void DestroyAction() {
         Destroy(gameObject, 3.0f);
 
-        Vector3 BossPosion = transform.position;
+        BossPosion = transform.position;
 
         BossPosion.x += Random.Range(3.0f, -3.0f);
         BossPosion.y += Random.Range(3.0f, -3.0f);

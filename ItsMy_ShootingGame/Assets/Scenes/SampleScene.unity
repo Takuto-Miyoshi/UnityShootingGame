@@ -274,17 +274,18 @@ MonoBehaviour:
   - {fileID: 2379073220468894076, guid: da6bc197f29debc4bb1973d99835a8c0, type: 3}
   - {fileID: 5287023476083568366, guid: f40bc5d2cc7ac1c4a8e4d66747fb4eef, type: 3}
   - {fileID: 1511932743961671881, guid: f34901f2e949b6f40b65130649cecc77, type: 3}
-  - {fileID: 641664514688583633, guid: 175be56b615e7fe469dfeb6de6e44285, type: 3}
+  - {fileID: 3806212791870690161, guid: 8cced51ee405e4b48b4bea080db32e2e, type: 3}
+  - {fileID: 7642210530437257053, guid: 0613215d0f1a3e545bed30a0f8fe522e, type: 3}
+  - {fileID: 80974151579644829, guid: bda81ad68141c9c4ebd504023d9f0510, type: 3}
   - {fileID: 5287023476083568366, guid: f40bc5d2cc7ac1c4a8e4d66747fb4eef, type: 3}
   - {fileID: 5287023476083568366, guid: f40bc5d2cc7ac1c4a8e4d66747fb4eef, type: 3}
   - {fileID: 5287023476083568366, guid: f40bc5d2cc7ac1c4a8e4d66747fb4eef, type: 3}
   - {fileID: 5287023476083568366, guid: f40bc5d2cc7ac1c4a8e4d66747fb4eef, type: 3}
-  - {fileID: 5287023476083568366, guid: f40bc5d2cc7ac1c4a8e4d66747fb4eef, type: 3}
-  - {fileID: 5287023476083568366, guid: f40bc5d2cc7ac1c4a8e4d66747fb4eef, type: 3}
-  firstBoss: {fileID: 3174236716454363963, guid: 40dc2f618059b6a4b9d5c85dddc8a698,
+  firstBoss: {fileID: 3891007562809447627, guid: 964d63721a86a2641ac41bc17eac814d,
     type: 3}
   bossSpawnTime: 60
-  wave: 0
+  scallTrigger: 0
+  wave: 1
 --- !u!4 &122131296
 Transform:
   m_ObjectHideFlags: 0
@@ -1315,11 +1316,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UiPowerObject: {fileID: 2000162036}
   UiPointObject: {fileID: 434677283}
-  UiHpObject: {fileID: 89796601}
   power: 1
   maxPower: 5
   point: 0
-  maxPoint: 100
+  maxPoint: 30
 --- !u!95 &1303066424
 Animator:
   serializedVersion: 3
@@ -1397,7 +1397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303066422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.61, y: 2.45, z: 0}
+  m_LocalPosition: {x: 2.61, y: -1.55, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1794204529}

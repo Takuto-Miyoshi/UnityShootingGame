@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemySway : MonoBehaviour
 {
 
-    int hp = 10;
+    int hp = 5;
 
     float speed = 0.1f;
     float createRotationTimer = 0.0f;
@@ -76,5 +76,9 @@ public class EnemySway : MonoBehaviour
             }
 
         }
+    }
+
+    void OnBecameInvisible() {
+        Destroy(gameObject);
     }
 }

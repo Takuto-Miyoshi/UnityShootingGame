@@ -25,14 +25,17 @@ public class Robot : MonoBehaviour
 
     // ポイント
     public int point = 0;
-    public int maxPoint = 100;
+    public int maxPoint = 30;
 
     GameObject hitBox;
     HitBox hitbox;
 
+    Vector2 vec2;
+
     // Start is called before the first frame update
     void Start()
     {
+        vec2 = this.transform.position;
         hitBox = GameObject.Find("hitbox");
         hitbox = hitBox.GetComponent<HitBox>();
         UiPowerObject.GetComponent<PowerManager>().PrintPower(power, maxPower);
@@ -92,14 +95,14 @@ public class Robot : MonoBehaviour
         // ポイントが溜まっていたらパワーアップ
         if(point >= maxPoint) {
             if (Input.GetKeyDown(KeyCode.A)) {
-                point -= 100;
+                point -= maxPoint;
                 hitbox.MaxHp += 3;
                 hitbox.Hp += 3;
                 hitbox.UiHpObject.GetComponent<HpManager>().PrintHp(hitbox.Hp, hitbox.MaxHp);
             }
 
             if (Input.GetKeyDown(KeyCode.S)) {
-                point -= 100;
+                point -= maxPoint;
                 power += 1;
                 UiPowerObject.GetComponent<PowerManager>().PrintPower(power, maxPower);
             }

@@ -7,7 +7,7 @@ public class EnemyDown : MonoBehaviour
 
     float Speed = 0.06f;
 
-    int hp = 15;
+    int hp = 6;
 
     public GameObject ExplosionPrefab = null;
 
@@ -76,5 +76,9 @@ public class EnemyDown : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    void OnBecameInvisible() {
+        Destroy(gameObject);
     }
 }

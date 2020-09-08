@@ -1,23 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class EnemyBulletStraight : MonoBehaviour
 {
 
     float Speed = 0.14f;
 
+
     // Start is called before the first frame update
     void Start() {
+
     }
 
     // Update is called once per frame
     void Update() {
-
     }
 
     void FixedUpdate() {
-        transform.Translate(-Speed, 0.0f, 0.0f);
+        transform.Translate(-Speed, 0.0f, 0.0f, Space.Self);
+
+
     }
 
     void OnTriggerEnter2D(Collider2D collision) {

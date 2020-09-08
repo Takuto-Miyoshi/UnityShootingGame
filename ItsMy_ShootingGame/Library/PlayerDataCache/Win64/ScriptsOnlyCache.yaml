@@ -4,14 +4,25 @@ ScriptsOnlyBuild:
     - BossBullet01
     - BossCanon
     - Boss_01
-    - Enemy01
-    - Enemy02
-    - Enemy03
+    - EnemyAround
+    - EnemyAroundR
+    - EnemyBulletStraight
+    - EnemyDown
     - EnemyFactory
+    - EnemyScall
+    - EnemySway
+    - EnemyUp
     - Explosion
     - GameController
+    - HitBox
+    - Hp
+    - HpManager
+    - ItemPoint
     - NormalBullet
+    - PointManager
+    - PowerManager
     - Robot
+    - ScallCanon
     - TitleController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -27,6 +38,13 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -58,26 +76,58 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11888}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 12426}
+      Script: {instanceID: 11500}
+    - Class: 114
+      Script: {instanceID: 11514}
+    - Class: 114
+      Script: {instanceID: 11604}
+    - Class: 114
+      Script: {instanceID: 11716}
+    - Class: 114
+      Script: {instanceID: 11896}
+    - Class: 114
+      Script: {instanceID: 12182}
+    - Class: 114
+      Script: {instanceID: 12332}
     - Class: 114
       Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 12570}
+      Script: {instanceID: 12442}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 12522}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 12580}
     - Class: 114
-      Script: {instanceID: 13854}
+      Script: {instanceID: 12686}
     - Class: 114
-      Script: {instanceID: 14158}
+      Script: {instanceID: 12822}
     - Class: 114
-      Script: {instanceID: 16404}
+      Script: {instanceID: 12832}
+    - Class: 114
+      Script: {instanceID: 13212}
+    - Class: 114
+      Script: {instanceID: 13394}
+    - Class: 114
+      Script: {instanceID: 13490}
+    - Class: 114
+      Script: {instanceID: 13534}
+    - Class: 114
+      Script: {instanceID: 13666}
+    - Class: 114
+      Script: {instanceID: 13878}
+    - Class: 114
+      Script: {instanceID: 14134}
+    - Class: 114
+      Script: {instanceID: 14186}
+    - Class: 114
+      Script: {instanceID: 14286}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -86,6 +136,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/TitleScene.unity:
     - Class: 1
@@ -117,21 +173,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11888}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 11604}
     - Class: 114
-      Script: {instanceID: 12366}
+      Script: {instanceID: 11760}
     - Class: 114
-      Script: {instanceID: 12426}
+      Script: {instanceID: 11896}
     - Class: 114
-      Script: {instanceID: 12570}
+      Script: {instanceID: 12332}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 12374}
     - Class: 114
-      Script: {instanceID: 13854}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 15432}
+      Script: {instanceID: 12580}
+    - Class: 114
+      Script: {instanceID: 12822}
+    - Class: 114
+      Script: {instanceID: 13304}
+    - Class: 114
+      Script: {instanceID: 13394}
+    - Class: 114
+      Script: {instanceID: 13878}
+    - Class: 114
+      Script: {instanceID: 13962}
+    - Class: 114
+      Script: {instanceID: 14134}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -217,6 +285,12 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: a2c000a492279ec2096287d7162324bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyAroundR
+  - hash:
+      serializedVersion: 2
       Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -239,6 +313,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScallCanon
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -269,6 +349,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemPoint
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -316,7 +408,7 @@ ScriptsOnlyBuild:
       Hash: a2c000a492279ec2096287d7162324bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Enemy02
+    className: EnemySway
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -382,7 +474,7 @@ ScriptsOnlyBuild:
       Hash: a2c000a492279ec2096287d7162324bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Enemy03
+    className: EnemyAround
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -391,13 +483,13 @@ ScriptsOnlyBuild:
     className: NormalBullet
   - hash:
       serializedVersion: 2
-      Hash: d164d18bcc9f383017a6e933075423c7
+      Hash: 636f832592a2babb697b2054773734fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boss_01
   - hash:
       serializedVersion: 2
-      Hash: c07f175f8dfe4ce9a3b8efd90a34d58b
+      Hash: 96c274d96ef14604e1dd5f2c40a1616a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyFactory
@@ -407,6 +499,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Asset
+  - hash:
+      serializedVersion: 2
+      Hash: 45d7362d7c5174cb6b26ae1c88e76b96
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HitBox
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -433,6 +531,12 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
+      Hash: 5ab645ca9786331d4b63ca669679f512
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PowerManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -443,6 +547,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: a2c000a492279ec2096287d7162324bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyScall
+  - hash:
+      serializedVersion: 2
+      Hash: 7421531b3e7a6e36acfdd5c190a47dc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Hp
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -487,6 +603,18 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
+      Hash: f6b03564b563fbc9094806f35d257110
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHP
+  - hash:
+      serializedVersion: 2
+      Hash: c8bd0b9ec9949de2fae705e9b3dc60d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PointManager
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -523,6 +651,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyBulletStraight
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -532,10 +666,16 @@ ScriptsOnlyBuild:
       Hash: a2c000a492279ec2096287d7162324bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Enemy01
+    className: EnemyDown
   - hash:
       serializedVersion: 2
-      Hash: a0520d0f287e486f4b0928566c72fa21
+      Hash: 99687ad6d465d6a7091a4f99b86582e9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HpManager
+  - hash:
+      serializedVersion: 2
+      Hash: 09b7e531585050107f49280280d22904
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Robot
@@ -586,6 +726,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: TitleController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: LookAt
   - hash:
       serializedVersion: 2
@@ -599,6 +745,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: a2c000a492279ec2096287d7162324bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyUp
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -689,20 +841,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TitleController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameController
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScene.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/miyos/Desktop/Git/UnityPractice/ItsMy_ShootingGame/Exe/ItsMy_ShootingGame.exe
+  playerPath: C:/Users/kiyok/Desktop/Shooting/ItsMy_ShootingGame.exe
